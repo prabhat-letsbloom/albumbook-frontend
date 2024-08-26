@@ -12,9 +12,7 @@ const Navbar = () => {
         <li>
           <Link to="/add">Add List</Link>
         </li>
-        <li>
-          <Link to="/update">Update List</Link>
-        </li>
+
         <li>
           <Link to="/getbyid">Get by ID</Link>
         </li>

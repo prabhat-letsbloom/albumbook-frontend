@@ -13,7 +13,7 @@ const AddAlbum = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8080/albums", album)
+      .post(`${process.env.REACT_APP_API_URL}/albums`, album)
       .then(() => {
         setAlbum({ title: "", artist: "", price: "" });
       })

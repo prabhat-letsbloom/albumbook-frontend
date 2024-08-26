@@ -11,14 +11,14 @@ const AlbumList = () => {
 
   const fetchAlbums = () => {
     axios
-      .get("http://localhost:8080/albums")
+      .get(`${process.env.REACT_APP_API_URL}/albums`)
       .then((response) => setAlbums(response.data))
       .catch((error) => console.error("Error fetching albums:", error));
   };
 
   const deleteAlbum = (id) => {
     axios
-      .delete(`http://localhost:8080/albums/${id}`)
+      .delete(`${process.env.REACT_APP_API_URL}/albums/${id}`)
       .then(() => {
         fetchAlbums();
       })
