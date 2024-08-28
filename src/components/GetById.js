@@ -12,7 +12,7 @@ const GetById = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .get(`http://localhost:8080/albums/${id}`)
+      .get(`${process.env.REACT_APP_API_URL}/albums/${id}`)
       .then((response) => setAlbum(response.data))
       .catch((error) => console.error("Error fetching album:", error));
   };
